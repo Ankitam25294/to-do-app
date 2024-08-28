@@ -1,0 +1,50 @@
+<!-- <div class="parent-container">
+  <h2>My To Do list</h2>
+  <div class="add-todo-container">
+    <form 
+      #formRef="ngForm"
+      (ngSubmit)="onSubmit(formRef.value)">
+      <input 
+      type="text"
+      placeholder="Title.."
+      required
+      name="todoLabel"
+      [(ngModel)]="todoLabel"
+      class="todo-input"/>
+      <button type="submit" class="submit-btn">Add</button>
+    </form>
+  </div>
+  <div class="list-todo-container">
+    <div class="list-todo-item" *ngFor = "let item of todoList; index as i" [ngClass]="checkedList.includes(i) ? 'checked-item': '' " >
+         <div (click)="onListClick(i)" >
+          <span [style.visibility] = "checkedList.includes(i) ? 'visible': 'hidden' " class="icon tick-icon">
+            <fa-icon [icon]="faCheck"></fa-icon>
+          </span>
+          <span class="todo-label">
+             {{item}}
+          </span>
+        </div>
+        <span class="icon delete-icon" (click)="deleteToDoItem(i)">
+          <fa-icon [icon]="faClose"></fa-icon>
+        </span>  
+    </div>
+  </div>
+</div> -->
+
+<!-- <div *ngIf = "!showTimeUp; else showTimeUpPopup">
+  Your session will expire in {{time}} sec
+</div>
+<ng-template #showTimeUpPopup >
+  <div>
+    Session Time Out.
+  </div>
+</ng-template> -->
+
+
+<div class="container">
+  <app-header [user]="user">Content {{newOrOld}}</app-header>
+  <button (click)="changeUserName()">click</button>
+  <router-outlet></router-outlet>
+</div>
+
+
